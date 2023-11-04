@@ -2,7 +2,7 @@ import React from "react";
 import ScrollTrigger from "react-scroll-trigger";
 import { useState } from "react";
 import CountUp from "react-countup";
-const CounterOnScroll = () => {
+const CounterOnScroll = ({ startPoint, endPoint, delay, duration }) => {
   const [counter, setCounter] = useState(false);
 
   return (
@@ -10,12 +10,16 @@ const CounterOnScroll = () => {
       onEnter={() => setCounter(true)}
       onExit={() => setCounter(false)}
     >
-      <div className="choose-fun-fact">
-        <h3>
-          {counter && <CountUp start={0} end={100} delay={0} duration={1} />}
-        </h3>
-        <p>Patients Beds</p>
-      </div>
+      <h3>
+        {counter && (
+          <CountUp
+            start={startPoint}
+            end={endPoint}
+            delay={delay}
+            duration={duration}
+          />
+        )}
+      </h3>
     </ScrollTrigger>
   );
 };

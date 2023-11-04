@@ -1,9 +1,8 @@
 import React from "react";
-
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar-area fixed-top is-sticky">
+      <div className="navbar-area fixed-top is-sticky ">
         <div className="main-responsive-nav">
           <div className="container">
             <div className="main-responsive-menu">
@@ -12,11 +11,6 @@ const Navbar = () => {
                   <img
                     src="/assets/noble_logo.png"
                     className="black-logo"
-                    alt="image"
-                  />
-                  <img
-                    src="assets/noble_logo.png"
-                    className="white-logo"
                     alt="image"
                   />
                 </a>
